@@ -3,12 +3,12 @@ import Layout from '@/components/Layout'
 export default function Page() {
   const html = `<div id="container">
             <!-- hero : s -->
-            <section id="sub-hero" class="hero-01">
+            <section id="sub-hero" class="hero-05">
                 <div class="hero-bg"></div>
                 <div class="hero-caption container">
                     <div class="caption-cell">
-                        <h2 data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">오시는길</h2>
-                        <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">(주)한빛레이저 찾아오시는 길</p>
+                        <h2 data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200">윤리경영</h2>
+                        <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">한빛레이저의 윤리경영 입니다.</p>
                     </div>
                 </div>
             </section>
@@ -28,38 +28,23 @@ export default function Page() {
     </div>
 </section>
             <!-- dropdown navigation : e -->
-            <!-- location section : s -->
-            <section class="sub-section location-section">
+            <!-- contact section : s -->
+            <section class="sub-section global-section">
                 <div class="container">
                     <!-- main heading : s -->
                     <div class="main-heading">
-                        <h2>오시는 길</h2>
+                        <h2>윤리경영</h2>
                     </div>
                     <!-- main heading : e -->
-                    <div class="map-container">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3211.3121533668614!2d127.38220475139569!3d36.40164227993464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x356549f8ccaa40ef%3A0xff15c7fe4ae69b0c!2z64yA7KCE6rSR7Jet7IucIOycoOyEseq1rCDsoITrr7zrj5kg7Jyg7ISx64yA66GcMTU5NuuyiOq4uCAzMi00OA!5e0!3m2!1sko!2skr!4v1628579034082!5m2!1sko!2skr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>                    </div>
-                    <!-- row : s -->
-                    <div class="row" data-match="1">
-                        <div class="col-sm-12 col-md-4 col-heading">
-                            <h3>(주)한빛레이저<br>   </h3>
-                        </div>
-                        <div class="col-sm-12 col-md-8 col-info">
-                            <dl class="clearfix">
-                                <dt>주소</dt>
-                                <dd>대전광역시 유성구 유성대로 1596번길 32-48</dd>
-                                <dt>대표번호</dt>
-                                <dd>042-879-3300</dd>
-                                <dt>이메일</dt>
-                                <dd>hbl@hblaser.co.kr</dd>
-                                <dt>운영시간</dt>
-                                <dd>AM 09:00 ~ PM 06:00 (점심시간 12:00 ~ 13:00 / 토&middot;일&middot;공휴일 휴무)</dd>
-                            </dl>
+                    <div class="global-wrap">
+                        <div class="img-box">
+                            <img src="/img/onepixel/images/ethics_img.png" alt="윤리경영 PC 이미지" class="hidden-xs">
+                            <img src="/img/onepixel/images/m_ethics_img.png" alt="윤리경영 MOBILE 이미지" class="visible-xs">
                         </div>
                     </div>
-                    <!-- row : e -->
                 </div>
             </section>
-            <!-- location section : e -->
+            <!-- contact section : e -->
         </div>
         <!-- container : e -->
         <!-- footer : s -->

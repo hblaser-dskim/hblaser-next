@@ -1,37 +1,106 @@
 import Layout from '@/components/Layout'
-import PageBanner from '@/components/PageBanner'
-import PostList from '@/components/PostList'
-import { supabase } from '@/lib/supabase'
-import Link from 'next/link'
 
-export const revalidate = 60
+export default function Page() {
+  const html = `<div id="container">
+            <!-- hero : s -->
+            <section id="sub-hero" class="hero-05">
+                <div class="hero-bg"></div>
+                <div class="hero-caption container">
+                    <div class="caption-cell">
+                        <h2 data-aos="fade-down" data-aos-duration="1200" data-aos-delay="200"> 공시정보 </h2>
+                        <p data-aos="fade-up" data-aos-duration="1200" data-aos-delay="500">한빛레이저의 공시정보 입니다.</p>
+                    </div>
+                </div>
+            </section>
+            <!-- hero : e -->
+            <!-- dropdown navigation : s -->
+            <section class="dropdown-nav-section">
+    <div class="container">
+        <a class="link-home" href="/"><i class="xi-home" aria-hidden="true"></i></a>
+        <div class="dropdown-wrap dropdown-01">
+            <a href="javascript:void(0)" role="button" aria-expanded="false" lang="en"></a>
+            <ul class="dropdown"></ul>
+        </div>
+        <div class="dropdown-wrap dropdown-02">
+            <a href="javascript:void(0)" role="button" aria-expanded="false"></a>
+            <ul class="dropdown"></ul>
+        </div>
+    </div>
+</section>
+            <!-- dropdown navigation : e -->
+            <!-- contact section : s -->
+            <section class="sub-section global-section">
+                <div class="container">
+                    <!-- main heading : s -->
+                    <div class="main-heading">
+                        <h2>공시정보 </h2>
+                    </div>
+                    <!-- main heading : e -->
+                    
 
-async function getPosts() {
-  const { data } = await supabase
-    .from('posts')
-    .select('*')
-    .eq('category', 'disclosure')
-    .order('created_at', { ascending: false })
-  return data || []
-}
 
-export default async function DisclosurePage() {
-  const posts = await getPosts()
+               <div class="cont cont-1">
+                <div class="w1400">
+                    <iframe 
+                            style="display: block; max-width: 100%; margin: 0 auto;"
+                            src="https://dart.fss.or.kr/html/search/SearchCompanyIR3_M.html?textCrpNM=00607496"
+                            name="IR" scrolling="yes" frameborder="0"
+                            width="750" height="1000" marginheight="0" marginwidth="0"></iframe>
+                </div>
+               </div>
+
+
+
+
+
+                </div>
+            </section>
+            <!-- contact section : e -->
+        </div>
+        <!-- container : e -->
+        <!-- footer : s -->
+<footer id="footer">
+    <div class="container">
+        <!-- nav : s -->
+        <nav>
+            <ul class="footer-nav">
+                <li><a href="/service/sub03.html">자료실</a></li>
+                <li><a href="/company/sub01.html">기업이념</a></li>
+                <li><a href="/company/sub03.html">오시는길</a></li>
+            </ul>
+        </nav>
+        <!-- nav : e -->
+        <!-- sns icons : s -->
+        <ul class="sns-icons">
+            <li><a href="//naver.com" target="_blank"><i class="ion-logo-instagram"></i></a></li>
+            <li><a href="//naver.com" target="_blank"><i class="ion-logo-facebook"></i></a></li>
+            <li><a href="//naver.com" target="_blank"><i class="ion-logo-youtube"></i></a></li>
+        </ul>
+        <!-- sns icons : e -->
+        <!-- info : s -->
+        <div class="info">
+            <p>(주)한빛레이저 <span>대표</span> 김정묵 <span> </span>  <br><span>주소</span> 대전광역시 유성구 유성대로 1596번길 32-48<br><span>문의메일</span> hbl@hblaser.co.kr <span>문의전화</span> 042-879-3300 <br><span></p>
+            <p>COPYRIGHT 2021 HBL Corporation ALL RIGHTS RESERVED.</p>
+        </div>
+        <!-- info : e -->
+    </div>
+</footer>
+<!-- footer : e -->
+    </main>
+    <!-- main : e -->
+</body>
+</html>
+<script language="javascript" type="text/javascript" src="/cjs/javascript.lib.js?date=1721110582"></script>
+
+            <script type="text/javascript">
+            var JsHost = (("https:" == document.location.protocol) ? "https://" : "http://");
+            var sTime = new Date().getTime();
+            document.write(unescape("%3Cscript id='log_script' src='" + JsHost + "blg-jsk.cafe24.com/weblog.js?uid=hblaser01&t=" + sTime + "' type='text/javascript'%3E%3C/script%3E"));
+            </script>
+        `
   return (
     <Layout>
-      <PageBanner title="공시정보" />
-      <div id="container">
-        <section className="sub-section">
-          <div className="container">
-            <ul className="sub-tab">
-              <li className="active"><Link href="/notice/disclosure">공시정보</Link></li>
-              <li><Link href="/notice/ir">IR</Link></li>
-              <li><Link href="/notice/pr">PR</Link></li>
-            </ul>
-            <PostList posts={posts} category="disclosure" />
-          </div>
-        </section>
-      </div>
+      <div dangerouslySetInnerHTML={{__html: html}} />
     </Layout>
   )
 }
