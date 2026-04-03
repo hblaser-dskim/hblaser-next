@@ -1,6 +1,4 @@
-import type { Metadata } from 'next'
-
-export const metadata: Metadata = {
+export const metadata = {
   title: '한빛레이저 - Global No.1 Laser System Solution',
   description: '한빛레이저는 레이저 용접·마킹·절단·패터닝 등 정밀 레이저 시스템 솔루션을 제공하는 글로벌 전문기업입니다.',
   openGraph: {
@@ -16,7 +14,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="ko">
       <head>
-        {/* CSS를 head에 넣어 FOUC 방지 */}
+        <meta charSet="utf-8" />
+        {/* 원본과 동일한 viewport */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="shortcut icon" href="/img/onepixel/images/favicon.ico" />
+
+        {/* CSS - 원본과 동일한 순서 */}
         <link rel="stylesheet" href="/img/onepixel/css/vendor/bootstrap.min.css" />
         <link rel="stylesheet" href="/img/onepixel/css/vendor/normalize.css" />
         <link rel="stylesheet" href="/img/onepixel/css/vendor/slick.css" />
@@ -31,14 +35,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/img/onepixel/css/layout.css" />
         <link rel="stylesheet" href="/img/onepixel/css/style.css" />
         <link rel="stylesheet" href="/img/onepixel/css/bootstrap.custom.css" />
-        {/* jQuery를 head에서 동기 로드 (슬라이더 등 의존성 해결) */}
-        <script src="/img/onepixel/js/vendor/jquery-1.12.1.min.js" defer></script>
-        <script src="/img/onepixel/js/vendor/bootstrap.min.js" defer></script>
-        <script src="/img/onepixel/js/vendor/slick.min.js" defer></script>
-        <script src="/img/onepixel/js/vendor/aos.js" defer></script>
-        <script src="/img/onepixel/js/vendor/jquery.parallax.min.js" defer></script>
-        <script src="/img/onepixel/js/vendor/jquery.magnific-popup.min.js" defer></script>
-        <script src="/img/onepixel/js/script.js" defer></script>
+
+        {/* JS - 원본과 동일하게 동기 로드 (반응형/슬라이더 정상 동작) */}
+        <script src="/img/onepixel/js/vendor/jquery-1.12.1.min.js"></script>
+        <script src="/img/onepixel/js/vendor/bootstrap.min.js"></script>
+        <script src="/img/onepixel/js/vendor/jquery.validate.min.js"></script>
+        <script src="/img/onepixel/js/vendor/jquery.parallax.min.js"></script>
+        <script src="/img/onepixel/js/vendor/slick.min.js"></script>
+        <script src="/img/onepixel/js/vendor/jquery.magnific-popup.min.js"></script>
+        <script src="/img/onepixel/js/vendor/jquery.justifiedGallery.min.js"></script>
+        <script src="/img/onepixel/js/vendor/ofi.min.js"></script>
+        <script src="/img/onepixel/js/vendor/aos.js"></script>
+        <script src="/img/onepixel/js/script.js"></script>
       </head>
       <body>{children}</body>
     </html>
