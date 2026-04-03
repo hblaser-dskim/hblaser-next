@@ -17,6 +17,8 @@ export const viewport = {
   userScalable: false,
 }
 
+import Scripts from '@/components/Scripts'
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
@@ -43,17 +45,17 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       </head>
       <body>
         {children}
-        {/* JS는 body 끝에서 로드 - React 렌더링 후 실행 */}
-        <script src="/img/onepixel/js/vendor/jquery-1.12.1.min.js" async={false} />
-        <script src="/img/onepixel/js/vendor/bootstrap.min.js" async={false} />
-        <script src="/img/onepixel/js/vendor/jquery.validate.min.js" async={false} />
-        <script src="/img/onepixel/js/vendor/jquery.parallax.min.js" async={false} />
-        <script src="/img/onepixel/js/vendor/slick.min.js" async={false} />
-        <script src="/img/onepixel/js/vendor/jquery.magnific-popup.min.js" async={false} />
-        <script src="/img/onepixel/js/vendor/jquery.justifiedGallery.min.js" async={false} />
-        <script src="/img/onepixel/js/vendor/ofi.min.js" async={false} />
-        <script src="/img/onepixel/js/vendor/aos.js" async={false} />
-        <script src="/img/onepixel/js/script.js" async={false} />
+        <Scripts />
+        {/* JS - defer로 React 렌더링 후 순서대로 실행 */}
+        <script src="/img/onepixel/js/vendor/jquery-1.12.1.min.js" defer={false} />
+        <script src="/img/onepixel/js/vendor/bootstrap.min.js" defer={false} />
+        <script src="/img/onepixel/js/vendor/jquery.validate.min.js" defer={false} />
+        <script src="/img/onepixel/js/vendor/jquery.parallax.min.js" defer={false} />
+        <script src="/img/onepixel/js/vendor/slick.min.js" defer={false} />
+        <script src="/img/onepixel/js/vendor/jquery.magnific-popup.min.js" defer={false} />
+        <script src="/img/onepixel/js/vendor/jquery.justifiedGallery.min.js" defer={false} />
+        <script src="/img/onepixel/js/vendor/ofi.min.js" defer={false} />
+        <script src="/img/onepixel/js/vendor/aos.js" defer={false} />
       </body>
     </html>
   )
