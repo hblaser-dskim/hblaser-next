@@ -31,6 +31,14 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/img/onepixel/css/layout.css" />
         <link rel="stylesheet" href="/img/onepixel/css/style.css" />
         <link rel="stylesheet" href="/img/onepixel/css/bootstrap.custom.css" />
+        {/* jQuery를 head에서 동기 로드 (슬라이더 등 의존성 해결) */}
+        <script src="/img/onepixel/js/vendor/jquery-1.12.1.min.js" defer></script>
+        <script src="/img/onepixel/js/vendor/bootstrap.min.js" defer></script>
+        <script src="/img/onepixel/js/vendor/slick.min.js" defer></script>
+        <script src="/img/onepixel/js/vendor/aos.js" defer></script>
+        <script src="/img/onepixel/js/vendor/jquery.parallax.min.js" defer></script>
+        <script src="/img/onepixel/js/vendor/jquery.magnific-popup.min.js" defer></script>
+        <script src="/img/onepixel/js/script.js" defer></script>
       </head>
       <body>{children}</body>
     </html>

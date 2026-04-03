@@ -1,7 +1,6 @@
 'use client'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Script from 'next/script'
 
 const nav = [
   {
@@ -156,14 +155,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </footer>
       </main>
 
-      {/* 원본 JS 그대로 */}
-      <Script src="/img/onepixel/js/vendor/jquery-1.12.1.min.js" strategy="beforeInteractive" />
-      <Script src="/img/onepixel/js/vendor/bootstrap.min.js" strategy="beforeInteractive" />
-      <Script src="/img/onepixel/js/vendor/slick.min.js" strategy="afterInteractive" />
-      <Script src="/img/onepixel/js/vendor/aos.js" strategy="afterInteractive" />
-      <Script src="/img/onepixel/js/vendor/jquery.parallax.min.js" strategy="afterInteractive" />
-      <Script src="/img/onepixel/js/vendor/jquery.magnific-popup.min.js" strategy="afterInteractive" />
-      <Script src="/img/onepixel/js/script.js" strategy="afterInteractive" />
+      {/* JS는 layout.tsx head에서 로드 */}
     </>
   )
 }
