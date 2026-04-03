@@ -10,12 +10,18 @@ export const metadata = {
   },
 }
 
+// Next.js viewport 별도 export (metadata의 viewport 자동생성 방지)
+export const viewport = {
+  width: 'device-width',
+  initialScale: 1.0,
+  userScalable: false,
+}
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
       <head>
         <meta charSet="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <link rel="shortcut icon" href="/img/onepixel/images/favicon.ico" />
 
