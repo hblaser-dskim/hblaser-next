@@ -15,12 +15,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="ko">
       <head>
         <meta charSet="utf-8" />
-        {/* 원본과 동일한 viewport */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
         <meta httpEquiv="X-UA-Compatible" content="ie=edge" />
         <link rel="shortcut icon" href="/img/onepixel/images/favicon.ico" />
 
-        {/* CSS - 원본과 동일한 순서 */}
+        {/* CSS */}
         <link rel="stylesheet" href="/img/onepixel/css/vendor/bootstrap.min.css" />
         <link rel="stylesheet" href="/img/onepixel/css/vendor/normalize.css" />
         <link rel="stylesheet" href="/img/onepixel/css/vendor/slick.css" />
@@ -35,20 +34,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <link rel="stylesheet" href="/img/onepixel/css/layout.css" />
         <link rel="stylesheet" href="/img/onepixel/css/style.css" />
         <link rel="stylesheet" href="/img/onepixel/css/bootstrap.custom.css" />
-
-        {/* JS - 원본과 동일하게 동기 로드 (반응형/슬라이더 정상 동작) */}
-        <script src="/img/onepixel/js/vendor/jquery-1.12.1.min.js"></script>
-        <script src="/img/onepixel/js/vendor/bootstrap.min.js"></script>
-        <script src="/img/onepixel/js/vendor/jquery.validate.min.js"></script>
-        <script src="/img/onepixel/js/vendor/jquery.parallax.min.js"></script>
-        <script src="/img/onepixel/js/vendor/slick.min.js"></script>
-        <script src="/img/onepixel/js/vendor/jquery.magnific-popup.min.js"></script>
-        <script src="/img/onepixel/js/vendor/jquery.justifiedGallery.min.js"></script>
-        <script src="/img/onepixel/js/vendor/ofi.min.js"></script>
-        <script src="/img/onepixel/js/vendor/aos.js"></script>
-        <script src="/img/onepixel/js/script.js"></script>
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        {/* JS는 body 끝에서 로드 - React 렌더링 후 실행 */}
+        <script src="/img/onepixel/js/vendor/jquery-1.12.1.min.js" async={false} />
+        <script src="/img/onepixel/js/vendor/bootstrap.min.js" async={false} />
+        <script src="/img/onepixel/js/vendor/jquery.validate.min.js" async={false} />
+        <script src="/img/onepixel/js/vendor/jquery.parallax.min.js" async={false} />
+        <script src="/img/onepixel/js/vendor/slick.min.js" async={false} />
+        <script src="/img/onepixel/js/vendor/jquery.magnific-popup.min.js" async={false} />
+        <script src="/img/onepixel/js/vendor/jquery.justifiedGallery.min.js" async={false} />
+        <script src="/img/onepixel/js/vendor/ofi.min.js" async={false} />
+        <script src="/img/onepixel/js/vendor/aos.js" async={false} />
+        <script src="/img/onepixel/js/script.js" async={false} />
+      </body>
     </html>
   )
 }
