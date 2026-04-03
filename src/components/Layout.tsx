@@ -66,22 +66,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <>
-      {/* 원본 CSS 그대로 */}
-      <link rel="stylesheet" href="/img/onepixel/css/vendor/bootstrap.min.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/vendor/normalize.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/vendor/slick.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/vendor/aos.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/vendor/magnific-popup.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/vendor/justifiedGallery.min.css" />
-      <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet" />
-      <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
-      <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet" />
-      <link rel="stylesheet" href="/img/onepixel/css/fonts.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/general.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/layout.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/style.css" />
-      <link rel="stylesheet" href="/img/onepixel/css/bootstrap.custom.css" />
-
       <main role="main">
         {/* 헤더 - 원본과 동일한 구조 */}
         <header id="header">

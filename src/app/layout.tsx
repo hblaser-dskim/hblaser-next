@@ -15,6 +15,23 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="ko">
+      <head>
+        {/* CSS를 head에 넣어 FOUC 방지 */}
+        <link rel="stylesheet" href="/img/onepixel/css/vendor/bootstrap.min.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/vendor/normalize.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/vendor/slick.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/vendor/aos.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/vendor/magnific-popup.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/vendor/justifiedGallery.min.css" />
+        <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700" rel="stylesheet" />
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+        <link href="https://unpkg.com/ionicons@4.5.5/dist/css/ionicons.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="/img/onepixel/css/fonts.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/general.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/layout.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/style.css" />
+        <link rel="stylesheet" href="/img/onepixel/css/bootstrap.custom.css" />
+      </head>
       <body>{children}</body>
     </html>
   )
